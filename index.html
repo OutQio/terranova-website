@@ -128,6 +128,36 @@
       outline: none;
       box-shadow: 0 0 0 3px rgba(95, 145, 112, 0.3);
     }
+
+    /* Counter animation */
+    .counter-value {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Testimonial carousel */
+    .testimonial-track {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Process step connector */
+    .process-connector {
+      position: absolute;
+      top: 28px;
+      left: calc(50% + 28px);
+      width: calc(100% - 56px);
+      height: 2px;
+      background: linear-gradient(90deg, #5f9170, #e4d5be);
+      opacity: 0.3;
+    }
+
+    /* Trust logo grayscale */
+    .trust-logo {
+      filter: grayscale(100%) opacity(0.5);
+      transition: filter 0.3s ease;
+    }
+    .trust-logo:hover {
+      filter: grayscale(0%) opacity(1);
+    }
   </style>
 </head>
 <body class="bg-sand-50 text-stone-800 font-sans antialiased">
@@ -195,22 +225,25 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
       <div class="max-w-3xl">
         <div class="reveal">
-          <span class="inline-block bg-forest-500/20 border border-forest-400/30 text-forest-300 text-xs font-semibold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full mb-6">Jeddah, Saudi Arabia</span>
+          <span class="inline-block bg-forest-500/20 border border-forest-400/30 text-forest-300 text-xs font-semibold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full mb-6">Jeddah's Premier Landscape Architecture Studio</span>
         </div>
         <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-6 reveal reveal-delay-1">
-          TerraNova<br />
-          <span class="text-sand-400">Landscape</span> &<br />
-          Urban Design
+          We Shape the<br />
+          <span class="text-sand-400">Living Spaces</span><br />
+          of Saudi Arabia
         </h1>
-        <p class="text-sand-200/90 text-lg sm:text-xl leading-relaxed max-w-2xl mb-10 reveal reveal-delay-2">
+        <p class="text-sand-200/90 text-lg sm:text-xl leading-relaxed max-w-2xl mb-4 reveal reveal-delay-2">
           To design sustainable, functional, and aesthetically inspiring outdoor environments that harmonize human needs with the natural world. Our goal is to elevate the human experience through innovative landscape architecture while preserving the ecological integrity of the region.
         </p>
+        <p class="text-sand-400 text-sm font-medium mb-10 reveal reveal-delay-2">
+          Supporting Vision 2030's Quality of Life Program & Saudi Green Initiative
+        </p>
         <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
-          <a href="#projects" class="bg-sand-400 hover:bg-sand-500 text-white font-semibold px-8 py-3.5 rounded-lg transition-all hover:shadow-xl hover:shadow-sand-400/20 text-sm">
-            View Our Work
+          <a href="#contact" class="bg-sand-400 hover:bg-sand-500 text-white font-semibold px-8 py-3.5 rounded-lg transition-all hover:shadow-xl hover:shadow-sand-400/20 text-sm">
+            Schedule a Consultation
           </a>
-          <a href="#contact" class="border border-sand-300/30 hover:border-sand-300/60 text-sand-200 hover:text-white font-semibold px-8 py-3.5 rounded-lg transition-all text-sm">
-            Start a Project
+          <a href="#projects" class="border border-sand-300/30 hover:border-sand-300/60 text-sand-200 hover:text-white font-semibold px-8 py-3.5 rounded-lg transition-all text-sm">
+            View Our Work
           </a>
         </div>
       </div>
@@ -224,6 +257,74 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </a>
+    </div>
+  </section>
+
+  <!-- ===== IMPACT STATS BAR ===== -->
+  <section class="bg-forest-950 py-16 border-b border-forest-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div class="text-center reveal">
+          <div class="font-display font-extrabold text-4xl sm:text-5xl text-sand-400 counter-value" data-target="47">0</div>
+          <p class="text-sand-200/60 text-sm mt-2 font-medium">Projects Delivered</p>
+        </div>
+        <div class="text-center reveal reveal-delay-1">
+          <div class="font-display font-extrabold text-4xl sm:text-5xl text-sand-400 counter-value" data-target="185" data-suffix="K">0</div>
+          <p class="text-sand-200/60 text-sm mt-2 font-medium">m&sup2; Landscape Designed</p>
+        </div>
+        <div class="text-center reveal reveal-delay-2">
+          <div class="font-display font-extrabold text-4xl sm:text-5xl text-sand-400 counter-value" data-target="40" data-suffix="%">0</div>
+          <p class="text-sand-200/60 text-sm mt-2 font-medium">Avg. Water Savings</p>
+        </div>
+        <div class="text-center reveal reveal-delay-3">
+          <div class="font-display font-extrabold text-4xl sm:text-5xl text-sand-400 counter-value" data-target="12">0</div>
+          <p class="text-sand-200/60 text-sm mt-2 font-medium">Years in the Western Region</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUSTED BY ===== -->
+  <section class="bg-white py-12 border-b border-sand-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-stone-400 text-xs font-semibold tracking-[0.2em] uppercase mb-8 reveal">Trusted by Leading Institutions</p>
+      <div class="flex flex-wrap items-center justify-center gap-10 lg:gap-16 reveal reveal-delay-1">
+        <!-- KAU -->
+        <div class="trust-logo flex flex-col items-center gap-1.5">
+          <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+          </div>
+          <span class="text-[10px] text-stone-400 font-medium">King Abdulaziz University</span>
+        </div>
+        <!-- Jeddah Municipality -->
+        <div class="trust-logo flex flex-col items-center gap-1.5">
+          <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+          </div>
+          <span class="text-[10px] text-stone-400 font-medium">Jeddah Municipality</span>
+        </div>
+        <!-- Red Sea Global -->
+        <div class="trust-logo flex flex-col items-center gap-1.5">
+          <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+          </div>
+          <span class="text-[10px] text-stone-400 font-medium">Red Sea Global</span>
+        </div>
+        <!-- MOMRAH -->
+        <div class="trust-logo flex flex-col items-center gap-1.5">
+          <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" /></svg>
+          </div>
+          <span class="text-[10px] text-stone-400 font-medium">MOMRAH</span>
+        </div>
+        <!-- Obhur Development -->
+        <div class="trust-logo flex flex-col items-center gap-1.5">
+          <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" /></svg>
+          </div>
+          <span class="text-[10px] text-stone-400 font-medium">Obhur Development Co.</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -393,8 +494,56 @@
     </div>
   </section>
 
+  <!-- ===== HOW WE WORK ===== -->
+  <section class="py-24 lg:py-32 bg-sand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20 reveal">
+        <span class="inline-block text-forest-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Our Process</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-forest-950 mb-4">How We Work</h2>
+        <p class="text-stone-500 text-lg max-w-2xl mx-auto">A transparent, collaborative approach from initial conversation to final handover.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="relative reveal reveal-delay-1">
+          <div class="hidden lg:block process-connector"></div>
+          <div class="w-14 h-14 bg-forest-500 rounded-2xl flex items-center justify-center mb-5">
+            <span class="font-display font-bold text-white text-lg">01</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-forest-950 mb-2">Discovery & Site Analysis</h3>
+          <p class="text-stone-500 text-sm leading-relaxed">We study your site's microclimate, soil, hydrology, and cultural context. Every project begins with deep local understanding.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative reveal reveal-delay-2">
+          <div class="hidden lg:block process-connector"></div>
+          <div class="w-14 h-14 bg-forest-500 rounded-2xl flex items-center justify-center mb-5">
+            <span class="font-display font-bold text-white text-lg">02</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-forest-950 mb-2">Concept & Design</h3>
+          <p class="text-stone-500 text-sm leading-relaxed">We develop 3D visualizations and master plans that align your vision with ecological best practices and Vision 2030 goals.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative reveal reveal-delay-3">
+          <div class="hidden lg:block process-connector"></div>
+          <div class="w-14 h-14 bg-forest-500 rounded-2xl flex items-center justify-center mb-5">
+            <span class="font-display font-bold text-white text-lg">03</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-forest-950 mb-2">Implementation</h3>
+          <p class="text-stone-500 text-sm leading-relaxed">Our team oversees construction, planting, and irrigation installation with weekly progress reporting and quality assurance.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="relative reveal reveal-delay-4">
+          <div class="w-14 h-14 bg-sand-400 rounded-2xl flex items-center justify-center mb-5">
+            <span class="font-display font-bold text-white text-lg">04</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-forest-950 mb-2">Handover & Maintenance</h3>
+          <p class="text-stone-500 text-sm leading-relaxed">We deliver a complete maintenance guide and offer 12-month landscape care plans to ensure long-term project success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="py-24 lg:py-32 bg-sand-50">
+  <section id="projects" class="py-24 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-20 reveal">
@@ -425,9 +574,14 @@
               <div>
                 <span class="inline-block bg-sand-400/90 text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full mb-3">Public Park</span>
                 <h3 class="font-display font-bold text-2xl text-white mb-2">The KAU Central Campus Park</h3>
-                <p class="text-sand-200/80 text-sm leading-relaxed max-w-lg">
+                <p class="text-sand-200/80 text-sm leading-relaxed max-w-lg mb-3">
                   A massive revitalization of the central student gathering spaces at King Abdulaziz University, focusing on shaded seating, native Hijazi vegetation, and smart water-conservation irrigation.
                 </p>
+                <div class="flex gap-4 text-[10px] font-bold tracking-wider uppercase">
+                  <span class="text-sand-400">45,000 m&sup2;</span>
+                  <span class="text-forest-400">35% Water Saved</span>
+                  <span class="text-sand-300/60">2023</span>
+                </div>
               </div>
             </div>
           </div>
@@ -447,9 +601,14 @@
               <div>
                 <span class="inline-block bg-sand-400/90 text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full mb-3">Urban Plaza</span>
                 <h3 class="font-display font-bold text-xl text-white mb-2">Al-Balad Historical Plaza</h3>
-                <p class="text-sand-200/80 text-sm leading-relaxed">
+                <p class="text-sand-200/80 text-sm leading-relaxed mb-3">
                   A pedestrian-friendly urban plaza near the historical district of Jeddah, integrating traditional architectural motifs with modern, solar-powered seating and interactive, cooling water features.
                 </p>
+                <div class="flex gap-4 text-[10px] font-bold tracking-wider uppercase">
+                  <span class="text-sand-400">12,000 m&sup2;</span>
+                  <span class="text-forest-400">Solar Powered</span>
+                  <span class="text-sand-300/60">2024</span>
+                </div>
               </div>
             </div>
           </div>
@@ -469,9 +628,14 @@
               <div>
                 <span class="inline-block bg-sand-400/90 text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full mb-3">Residential Landscape</span>
                 <h3 class="font-display font-bold text-xl text-white mb-2">Obhur Waterfront Villas</h3>
-                <p class="text-sand-200/80 text-sm leading-relaxed">
+                <p class="text-sand-200/80 text-sm leading-relaxed mb-3">
                   High-end community landscape design along the Obhur creek featuring private terraced gardens, communal courtyards, and sustainable coastal drainage systems.
                 </p>
+                <div class="flex gap-4 text-[10px] font-bold tracking-wider uppercase">
+                  <span class="text-sand-400">28 Villas</span>
+                  <span class="text-forest-400">Coastal Drainage</span>
+                  <span class="text-sand-300/60">2024</span>
+                </div>
               </div>
             </div>
           </div>
@@ -491,9 +655,14 @@
               <div>
                 <span class="inline-block bg-sand-400/90 text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full mb-3">Commercial Courtyard</span>
                 <h3 class="font-display font-bold text-2xl text-white mb-2">Faculty of Architecture & Planning Atrium</h3>
-                <p class="text-sand-200/80 text-sm leading-relaxed max-w-lg">
+                <p class="text-sand-200/80 text-sm leading-relaxed max-w-lg mb-3">
                   An immersive open-air workspace designed specifically for KAU's architecture students, blending biophilic design with outdoor studio spaces to boost creativity and wellbeing.
                 </p>
+                <div class="flex gap-4 text-[10px] font-bold tracking-wider uppercase">
+                  <span class="text-sand-400">8,500 m&sup2;</span>
+                  <span class="text-forest-400">Biophilic Design</span>
+                  <span class="text-sand-300/60">2023</span>
+                </div>
               </div>
             </div>
           </div>
@@ -513,13 +682,89 @@
               <div>
                 <span class="inline-block bg-forest-500/90 text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full mb-3">Eco-Restoration</span>
                 <h3 class="font-display font-bold text-2xl text-white mb-2">Red Sea Mangrove Rehabilitation</h3>
-                <p class="text-sand-200/80 text-sm leading-relaxed max-w-2xl">
+                <p class="text-sand-200/80 text-sm leading-relaxed max-w-2xl mb-3">
                   A vital coastal ecological project in the region that restored local marine biodiversity and created elevated, low-impact wooden walking trails for public education.
                 </p>
+                <div class="flex gap-4 text-[10px] font-bold tracking-wider uppercase">
+                  <span class="text-sand-400">3.2 km Coastline</span>
+                  <span class="text-forest-400">15K+ Mangroves Planted</span>
+                  <span class="text-sand-300/60">2022</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="py-24 lg:py-32 bg-forest-950 relative overflow-hidden">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;%235f9170&quot; fill-opacity=&quot;0.04&quot; fill-rule=&quot;evenodd&quot;%3E%3Cpath d=&quot;M0 20L20 0l20 20-20 20z&quot;/%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-sand-400 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Client Feedback</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">What Our Clients Say</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-forest-900/50 border border-forest-700/30 rounded-2xl p-8 reveal reveal-delay-1">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+          </div>
+          <p class="text-sand-200/80 leading-relaxed mb-6">"TerraNova transformed our campus into a space students actually want to spend time in. The water savings alone justified the investment within two years."</p>
+          <div>
+            <p class="font-semibold text-white text-sm">Dr. Fahad Al-Harbi</p>
+            <p class="text-sand-300/50 text-xs">VP of Campus Development, King Abdulaziz University</p>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-forest-900/50 border border-forest-700/30 rounded-2xl p-8 reveal reveal-delay-2">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+          </div>
+          <p class="text-sand-200/80 leading-relaxed mb-6">"Their understanding of Jeddah's microclimate is unmatched. Every plant they specified has thrived, even through the hottest summers. Truly local expertise with international standards."</p>
+          <div>
+            <p class="font-semibold text-white text-sm">Eng. Nora Al-Zahrani</p>
+            <p class="text-sand-300/50 text-xs">Project Director, Obhur Development Company</p>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-forest-900/50 border border-forest-700/30 rounded-2xl p-8 reveal reveal-delay-3">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <svg class="w-5 h-5 text-sand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+          </div>
+          <p class="text-sand-200/80 leading-relaxed mb-6">"The mangrove restoration project exceeded every environmental target we set. TerraNova didn't just meet the brief&mdash;they championed the ecological mission alongside us."</p>
+          <div>
+            <p class="font-semibold text-white text-sm">Dr. Layla Mahmoud</p>
+            <p class="text-sand-300/50 text-xs">Environmental Affairs, Red Sea Global</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="py-20 bg-sand-100 relative overflow-hidden">
+    <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-forest-500/5 to-transparent"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-950 mb-4">Ready to Transform Your Landscape?</h2>
+      <p class="text-stone-500 text-lg mb-8 max-w-2xl mx-auto">Whether it's a public park, private estate, or coastal restoration, we bring 12 years of Hijaz-region expertise to every project. Let's start a conversation.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#contact" class="bg-forest-600 hover:bg-forest-700 text-white font-semibold px-8 py-3.5 rounded-lg transition-all hover:shadow-lg text-sm">Schedule a Free Consultation</a>
+        <a href="tel:+966501234567" class="border border-forest-300/40 hover:border-forest-500 text-forest-700 font-semibold px-8 py-3.5 rounded-lg transition-all text-sm">Call +966 50 123 4567</a>
       </div>
     </div>
   </section>
@@ -662,31 +907,56 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-forest-950 py-12 border-t border-forest-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <!-- Footer logo -->
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-forest-500 flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-1.2 0-3.6 2-3.6 5.4 0 1.8.6 3 1.2 4.2C8.4 14.4 6 15 4.8 16.8c-.6 1.2 0 3 1.2 3.6h12c1.2-.6 1.8-2.4 1.2-3.6-1.2-1.8-3.6-2.4-4.8-4.2.6-1.2 1.2-2.4 1.2-4.2C15.6 5 13.2 3 12 3z" />
-            </svg>
+  <footer class="bg-forest-950 border-t border-forest-800/50">
+    <!-- Credentials bar -->
+    <div class="border-b border-forest-800/30 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-sand-300/40 text-[10px] font-semibold tracking-[0.2em] uppercase mb-5">Accreditations & Memberships</p>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+          <div class="flex items-center gap-2 text-sand-300/50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            <span class="text-xs font-medium">SCE Registered</span>
           </div>
-          <span class="font-display font-bold text-white">TerraNova</span>
+          <div class="flex items-center gap-2 text-sand-300/50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+            <span class="text-xs font-medium">ISO 14001</span>
+          </div>
+          <div class="flex items-center gap-2 text-sand-300/50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+            <span class="text-xs font-medium">LEED AP</span>
+          </div>
+          <div class="flex items-center gap-2 text-sand-300/50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-xs font-medium">ASLA Member</span>
+          </div>
+          <div class="flex items-center gap-2 text-sand-300/50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" /></svg>
+            <span class="text-xs font-medium">MOMRAH Classified</span>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Footer nav -->
-        <div class="flex items-center gap-6 text-sm">
-          <a href="#about" class="text-sand-300/60 hover:text-sand-300 transition-colors">About</a>
-          <a href="#services" class="text-sand-300/60 hover:text-sand-300 transition-colors">Services</a>
-          <a href="#projects" class="text-sand-300/60 hover:text-sand-300 transition-colors">Projects</a>
-          <a href="#contact" class="text-sand-300/60 hover:text-sand-300 transition-colors">Contact</a>
+    <!-- Main footer -->
+    <div class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-forest-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-1.2 0-3.6 2-3.6 5.4 0 1.8.6 3 1.2 4.2C8.4 14.4 6 15 4.8 16.8c-.6 1.2 0 3 1.2 3.6h12c1.2-.6 1.8-2.4 1.2-3.6-1.2-1.8-3.6-2.4-4.8-4.2.6-1.2 1.2-2.4 1.2-4.2C15.6 5 13.2 3 12 3z" />
+              </svg>
+            </div>
+            <span class="font-display font-bold text-white">TerraNova</span>
+          </div>
+          <div class="flex items-center gap-6 text-sm">
+            <a href="#about" class="text-sand-300/60 hover:text-sand-300 transition-colors">About</a>
+            <a href="#services" class="text-sand-300/60 hover:text-sand-300 transition-colors">Services</a>
+            <a href="#projects" class="text-sand-300/60 hover:text-sand-300 transition-colors">Projects</a>
+            <a href="#contact" class="text-sand-300/60 hover:text-sand-300 transition-colors">Contact</a>
+          </div>
+          <p class="text-sand-300/40 text-sm">&copy; 2025 TerraNova Landscape & Urban Design. All rights reserved.</p>
         </div>
-
-        <!-- Copyright -->
-        <p class="text-sand-300/40 text-sm">
-          &copy; 2025 TerraNova Landscape & Urban Design. All rights reserved.
-        </p>
       </div>
     </div>
   </footer>
@@ -761,6 +1031,29 @@
         }
       });
     }, { passive: true });
+
+    // ---- Counter animation ----
+    const counters = document.querySelectorAll('.counter-value');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const suffix = el.dataset.suffix || '';
+          const duration = 2000;
+          const start = performance.now();
+          const animate = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target) + suffix;
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
 
     // ---- Contact form handler ----
     const contactForm = document.getElementById('contact-form');
